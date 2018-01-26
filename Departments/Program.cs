@@ -10,6 +10,7 @@ namespace Departments
     {
         static void Main(string[] args)
         {
+            var department = new Department();
         }
     }
 }
