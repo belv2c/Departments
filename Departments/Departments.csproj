@@ -43,8 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Departments\Accounting.cs" />
+    <Compile Include="Departments\AccountingEmployee.cs" />
     <Compile Include="Departments\Department.cs" />
+    <Compile Include="Departments\IFullTime.cs" />
+    <Compile Include="Departments\IPartTime.cs" />
     <Compile Include="Departments\Marketing.cs" />
+    <Compile Include="Departments\MarketingEmployee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
