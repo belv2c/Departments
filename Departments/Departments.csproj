@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Departments\Accounting.cs" />
     <Compile Include="Departments\Department.cs" />
     <Compile Include="Departments\Marketing.cs" />
     <Compile Include="Program.cs" />

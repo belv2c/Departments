@@ -11,19 +11,13 @@ namespace Departments.Departments
 
         private Dictionary<string, string> _strategies = new Dictionary<string, string>();
 
-
         public Marketing(string dept_name, string supervisor, int employees, bool isHiring) : base(dept_name, supervisor, employees, isHiring)
         {
         }
 
-        // Publicly accessible method to add an HR policy
+        // Publicly accessible method to add a marketing strategy
         public void AddStrategy(string title, string text)
         {
-            /*
-                Talk about verbose! Every time you want to create, or
-                reference a KeyValuePair, you have to use the angle
-                brackets, and type keywords.
-            */
             _strategies.Add(title, text);
 
             foreach (KeyValuePair<string, string> strategy in _strategies)
@@ -35,8 +29,7 @@ namespace Departments.Departments
         // Overriding the default toString() method for each object instance
         public string toString()
         {
-            return $"{_name} {_supervisor} {_employee_count}";
+            return $"{_name} {_supervisor} {_employee_count} {_isHiring}";
         }
-
     }
 }
