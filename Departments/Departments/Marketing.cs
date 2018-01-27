@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Departments.Departments
 {
-    public class Marketing : Department
+    class Marketing : Department
     {
 
         private Dictionary<string, string> _strategies = new Dictionary<string, string>();
+        private double Budget;
 
         public Marketing(string dept_name, string supervisor, int employees, bool isHiring) : base(dept_name, supervisor, employees, isHiring)
         {
@@ -26,10 +27,16 @@ namespace Departments.Departments
             }
         }
 
-        // Overriding the default toString() method for each object instance
-        public string toString()
+        public void AttendMeeting(string meetTime, bool isOntime)
         {
-            return $"{_name} {_supervisor} {_employee_count} {_isHiring}";
+            if(isOntime)
+            {
+                Console.WriteLine($"Great job! You made it.");
+            }
+                Console.WriteLine($"You're probably getting fired.");
         }
+
+        public override double SetBudget(double budget) => Budget += budget + 23234.00;
+
     }
 }

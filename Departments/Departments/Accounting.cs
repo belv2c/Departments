@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Departments.Departments
 {
-    public class Accounting : Department
+    class Accounting : Department
     {
         private Dictionary<string, string> _counting = new Dictionary<string, string>();
+        private double Budget;
 
         public Accounting(string dept_name, string supervisor, int employees, bool isHiring) : base(dept_name, supervisor, employees, isHiring)
         {
@@ -25,9 +26,7 @@ namespace Departments.Departments
             }
         }
 
-        public string toString()
-        {
-            return $"{_name} {_supervisor} {_employee_count} {_isHiring}";
-        }
+        public override double SetBudget(double budget) => Budget += budget + 20000.00;
+    
     }
 }
