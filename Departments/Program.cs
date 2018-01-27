@@ -1,11 +1,6 @@
 ﻿using Departments.Departments;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
 
 namespace Departments
 {
@@ -28,7 +23,7 @@ namespace Departments
             };
 
             agency.Add(deptMarketing);
-
+            agency.Add(deptAccounting);
 
             foreach (Department d in agency)
             {
