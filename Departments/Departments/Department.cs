@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Departments
 {
     // Parent class for all departments
-    public class Department
+    abstract class Department
     {
         protected string _name;
         protected string _supervisor;
@@ -22,5 +22,13 @@ namespace Departments
             _employee_count = employees;
             _isHiring = isHiring;
         }
+
+        public void AttendMeeting(string meetTime)
+        {
+            Console.WriteLine($"Come to the meeting at 1:00, or else.");
+        }
+
+        public abstract double SetBudget(double budget);
+        
     }
 }

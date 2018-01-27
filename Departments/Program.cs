@@ -20,6 +20,7 @@ namespace Departments
             var deptAccounting = new Accounting("Accounting", "My mom", 3, false);
             deptAccounting.CountMoney("add", "money");
 
+            double baseBudget = 75000.00;
 
             var agency = new List<Department>
             {
@@ -31,6 +32,7 @@ namespace Departments
 
             foreach (Department d in agency)
             {
+                d.SetBudget(baseBudget);
                 Console.WriteLine($"{d.ToString()}");
                 Console.ReadLine();
             }
