@@ -13,24 +13,28 @@ namespace Departments
     {
         static void Main(string[] args)
         {
-            List<Department> departments = new List<Department>();
-
             // Create some instances
             var deptMarketing = new Marketing("Marketing", "Elmo", 1, true);
             deptMarketing.AddStrategy("do a giveaway", "reach some new users");
 
-            // Add derived departments to the list
-            departments.Add(deptMarketing);
+            var deptAccounting = new Accounting("Accounting", "My mom", 3, false);
+            deptAccounting.CountMoney("add", "money");
 
-            // Iterate over all items in the list and output a string 
-            // representation of the class
-            foreach (Department d in departments)
+
+            var agency = new List<Department>
+            {
+                deptMarketing, deptAccounting
+            };
+
+            agency.Add(deptMarketing);
+
+
+            foreach (Department d in agency)
             {
                 Console.WriteLine($"{d.ToString()}");
                 Console.ReadLine();
             }
         }
-
     }
 }
 
